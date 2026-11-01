@@ -76,6 +76,24 @@ compiler isn't in `~/Projects/amiga-toolchain`.
 The non-window parts (dates, entry files, character conversion, the Diary
 Server client in `net.c`) are the same as in Diary for AmigaOS 3.2.
 
+## Diary on all systems
+
+Diary exists for these systems; the current versions share their entries
+through a [Diary Server](https://github.com/retrolemmy/Diary-Server), which
+also gives modern browsers a Diary web page:
+
+- [Classic Mac OS](https://github.com/retrolemmy/Diary) for 68k and PowerPC
+  Macs (tested on a Mac with Mac OS 8.1 and a Power Mac G4 with Mac OS 9.2.2)
+- [AmigaOS 3.2](https://github.com/retrolemmy/Diary-Amiga) (tested on an A4000)
+- [MorphOS and AmigaOS with MUI](https://github.com/retrolemmy/Diary-Amiga-MUI)
+  (tested on a Mac mini G4 with MorphOS and on the A4000)
+- [Mac OS X 10.4 and 10.5](https://github.com/retrolemmy/Diary-MacOSX) for
+  PowerPC and Intel Macs (tested on Leopard)
+- [Windows 98](https://github.com/retrolemmy/Diary-Win98) (tested on Windows 98
+  and Windows 11)
+- [Diary Server](https://github.com/retrolemmy/Diary-Server) (tested on a
+  RetroNAS)
+
 ## License
 
 No rights reserved: Diary is dedicated to the public domain under
