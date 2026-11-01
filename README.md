@@ -40,6 +40,8 @@ and 4 with MUI 3.8 or later and the TextEditor.mcc class (MorphOS has it;
 on AmigaOS it's on Aminet as
 [MCC_TextEditor](https://aminet.net/package/dev/mui/MCC_TextEditor-15.56)
 if your MUI doesn't include it). Without them, Diary says what's missing.
+Tested on a Mac mini G4 with MorphOS and on an A4000 with AmigaOS 3.2 and
+MUI, both with a Diary Server.
 
 ## Diary Server
 

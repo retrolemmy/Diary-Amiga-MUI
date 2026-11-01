@@ -29,7 +29,14 @@
 
 #include "net.h"
 
-static const char kVersion[] __attribute__((used)) = "$VER: Diary 1.0 (29.10.2026) MUI";
+static const char kVersion[] __attribute__((used)) = "$VER: Diary 1.0.1 (1.11.2026) MUI";
+
+/* MUI needs more stack than the 4 KB AmigaOS starts programs with by
+   default. Referencing __stkinit links in libnix's swapstack, which moves
+   Diary to a stack of __stack bytes before main() if it got less. */
+extern void __stkinit(void);
+void *__stkinit_ref = __stkinit;
+unsigned long __stack = 32768;
 
 #define kEntriesDir     "PROGDIR:Diary Entries"
 #define kSettingsFile   "PROGDIR:Diary Entries/Diary Settings"
@@ -358,7 +365,7 @@ static void ShowError(const char *text)
 
 static void ShowAbout(void)
 {
-    ShowMessage("\33cDiary 1.0 for MUI\n\n"
+    ShowMessage("\33cDiary 1.0.1 for MUI\n\n"
                 "A simple day-by-day journal for MorphOS\n"
                 "and AmigaOS with MUI.\n\n"
                 "https://github.com/retrolemmy/Diary-Amiga-MUI\n"
@@ -1295,7 +1302,7 @@ static BOOL CreateApplication(void)
 
     gWin = MUI_NewObject(MUIC_Window,
         MUIA_Window_Title, (ULONG)gTitle,
-        MUIA_Window_ScreenTitle, (ULONG)"Diary 1.0",
+        MUIA_Window_ScreenTitle, (ULONG)"Diary 1.0.1",
         MUIA_Window_ID, MAKE_ID('D', 'I', 'A', 'R'),
         MUIA_Window_Menustrip, (ULONG)menus,
         MUIA_Window_RootObject, MUI_NewObject(MUIC_Group,
