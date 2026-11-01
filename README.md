@@ -3,7 +3,8 @@
 A simple one-page-per-day journal for MorphOS, and for AmigaOS with MUI.
 It's the MUI sibling of [Diary for AmigaOS 3.2](https://github.com/retrolemmy/Diary-Amiga):
 the same program with a MUI window instead of ReAction. Like the
-[classic Mac OS](https://github.com/retrolemmy/Diary),
+[classic Mac OS](https://github.com/retrolemmy/Diary) (68k Macs, and PowerPC
+Macs up to a G4 with Mac OS 9.2.2),
 [Mac OS X](https://github.com/retrolemmy/Diary-MacOSX) and
 [Windows 98](https://github.com/retrolemmy/Diary-Win98) versions, it can keep
 its entries on a [Diary Server](https://github.com/retrolemmy/Diary-Server),
